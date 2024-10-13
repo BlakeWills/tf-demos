@@ -14,8 +14,8 @@ provider "azurerm" {
 locals {
   address_space = {
     hub_uks = {
-      vnet           = "10.0.0.0/16"
-      bastion_subnet = "10.0.5.0/27"
+      vnet            = "10.0.0.0/16"
+      bastion_subnet  = "10.0.5.0/27"
       firewall_subnet = "10.0.10.0/24"
     }
     spoke_one_uks = {

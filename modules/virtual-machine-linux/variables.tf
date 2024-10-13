@@ -19,6 +19,10 @@ variable "virtual_network" {
 variable "subnet_config" {
   type = object({
     address_prefixes = list(string)
+
+    route_table = optional(object({
+      id = string
+    }))
   })
 
   description = "Configuration for the virtual machine subnet"

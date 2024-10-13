@@ -5,6 +5,13 @@ resource "azurerm_subnet" "vm-subnet" {
   address_prefixes     = var.subnet_config.address_prefixes
 }
 
+resource "azurerm_subnet_route_table_association" "vm-subnet-rt" {
+  count = var.subnet_config.route_table != null ? 1 : 0
+
+  subnet_id      = azurerm_subnet.vm-subnet.id
+  route_table_id = var.subnet_config.route_table.id
+}
+
 resource "azurerm_network_interface" "vm-nic" {
   name                = "${var.name}-nic"
   location            = var.resource_group.location
