@@ -19,8 +19,8 @@ resource "azurerm_public_ip" "hub-uks-firewall-pip" {
 
 resource "azurerm_firewall_policy" "hub-uks-firewall-policy" {
   name                     = "${local.hub_uks_fw_name}-policy"
-  location            = azurerm_resource_group.hub-uks-rg.location
-  resource_group_name = azurerm_resource_group.hub-uks-rg.name
+  location                 = azurerm_resource_group.hub-uks-rg.location
+  resource_group_name      = azurerm_resource_group.hub-uks-rg.name
   sku                      = "Standard"
   threat_intelligence_mode = "Alert"
 }
