@@ -21,15 +21,21 @@ locals {
     spoke_one_uks = {
       vnet      = "10.10.0.0/16"
       vm_subnet = "10.10.10.0/24"
+      app_service_subnet = "10.10.11.0/24"
+      pe_subnet = "10.10.12.0/24"
     }
     spoke_two_uks = {
       vnet      = "10.20.0.0/16"
       vm_subnet = "10.20.10.0/24"
     }
+    spoke_three_uks = {
+      vnet      = "10.11.0.0/16"
+      vm_subnet = "10.11.10.0/24"
+    }
   }
 
   common_tags = {
-    sample = "1-hub-and-spoke"
+    sample = "2-hub-and-spoke-multi-region"
     environment     = "development"
     cost_code       = "code_value"
     created_by      = "james.bancroft7@nhs.net"
