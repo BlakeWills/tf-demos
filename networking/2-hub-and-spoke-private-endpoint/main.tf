@@ -35,15 +35,6 @@ locals {
   }
 
   common_tags = {
-    sample = "2-hub-and-spoke-multi-region"
-    environment     = "development"
-    cost_code       = "code_value"
-    created_by      = "james.bancroft7@nhs.net"
-    created_date    = "01/01/2024"
-    tech_lead       = "james.bancroft7@nhs.net"
-    requested_by    = "james.bancroft7@nhs.net"
-    service_product = "development"
-    team            = "development"
-    service_level   = "bronze"
+    sample = "2-hub-and-spoke-private-endpoint"
   }
 }
